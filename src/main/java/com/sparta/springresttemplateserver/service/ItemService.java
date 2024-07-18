@@ -36,10 +36,14 @@ public class ItemService {
         return responseDto;
     }
 
-    public Item postCall(String query, UserRequestDto requestDto) {
-        return null;
-    }
+    public Item postCall(String query, UserRequestDto userRequestDto) {
+        //UserRequestDto 제대로 넘어왔는지 확인용으로 찍는것임
+        System.out.println("userRequestDto.getUsername() = " + userRequestDto.getUsername());
+        System.out.println("userRequestDto.getPassword() = " + userRequestDto.getPassword());
 
+        return getCallObject(query);
+    }
+    
     public ItemResponseDto exchangeCall(String token, UserRequestDto requestDto) {
         return null;
     }
